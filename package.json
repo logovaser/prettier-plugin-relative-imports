@@ -1,0 +1,31 @@
+{
+  "name": "prettier-plugin-relative-imports",
+  "version": "0.1.0",
+  "description": "Prettier plugin to convert deep relative import paths to absolute paths",
+  "main": "index.js",
+  "keywords": [
+    "prettier",
+    "prettier-plugin",
+    "imports",
+    "relative-imports",
+    "absolute-imports",
+    "nextjs"
+  ],
+  "author": "",
+  "license": "MIT",
+  "peerDependencies": {
+    "prettier": "^2.0.0 || ^3.0.0"
+  },
+  "dependencies": {
+    "typescript": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "prettier": "^3.7.4"
+  },
+  "files": [
+    "index.js",
+    "lib",
+    "prettier.d.ts"
+  ]
+}
