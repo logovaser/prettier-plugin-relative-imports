@@ -18,16 +18,16 @@ function getParser(moduleName, parserName) {
 module.exports = {
   parsers: {
     get babel() {
-      return createParser(getParser("babel", "babel"), "babel", "babel");
+      return createParser(getParser("babel", "babel"));
     },
     get "babel-ts"() {
-      return createParser(getParser("babel", "babel-ts"), "babel", "babel-ts");
+      return createParser(getParser("babel", "babel-ts"));
     },
     get typescript() {
-      return createParser(getParser("typescript", "typescript"), "typescript", "typescript");
+      return createParser(getParser("typescript", "typescript"));
     },
     get vue() {
-      return createParser(getParser("vue", "vue"), "vue", "vue");
+      return createParser(getParser("vue", "vue"));
     },
   },
   options: {
