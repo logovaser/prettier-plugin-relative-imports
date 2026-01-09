@@ -31,7 +31,7 @@ When both plugins are loaded in sequence:
 
 ## 🔄 How It Works Now
 
-When our plugin is loaded **LAST**:
+When our plugin is loaded **LAST**, it **automatically chains** with organize-imports:
 
 1. **Our plugin transforms the text FIRST:**
    ```typescript
@@ -42,11 +42,16 @@ When our plugin is loaded **LAST**:
    import { X } from "@/components/x"
    ```
 
-2. **Our plugin calls the base Prettier parser** with the transformed text
+2. **Our plugin detects organize-imports** and calls its parser with the transformed text
 
-3. **organize-imports processes the result** via its mechanisms (preprocess hooks, AST processing, etc.)
+3. **organize-imports processes the transformed text:**
+   - Sorts imports
+   - Groups by type
+   - Removes unused imports
 
-4. **Both transformations apply!** ✅
+4. **Both transformations apply sequentially!** ✅
+
+**This is automatic** - our plugin detects organize-imports and chains with it!
 
 ## 🧪 Test It
 
